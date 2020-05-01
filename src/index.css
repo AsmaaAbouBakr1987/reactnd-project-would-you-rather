@@ -84,3 +84,11 @@ li {
   border-radius: 3px;
   cursor: pointer;
 }
+.user-info {
+  margin: 25px 10px;
+  display: flex;
+  font-weight: bold;
+}
+.would-u-rather h2 {
+  color: blueviolet;
+}
