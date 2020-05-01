@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import {handleInitialData} from '../actions/shared'
 import Dashboard from './Dashboard'
+import Login from './Login'
+import { Route,Redirect, withRouter } from 'react-router-dom'
+
 
 class App extends Component {
   componentDidMount(){
@@ -9,10 +12,14 @@ class App extends Component {
   }
   render() {
     return (
+      
       <div>
-        {this.props.loading === true
-        ? null
-        :<Dashboard/>}
+<Route exact path="/" component={Login} />
+<Route path="/dashboard" component={Dashboard} />
+        
+      
+        
+        
       </div>
     )
   }
