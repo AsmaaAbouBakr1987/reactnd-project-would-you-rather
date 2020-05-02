@@ -12,7 +12,7 @@ class Login extends Component {
 	
 	handleSelectionChanged = function(event) {
 		const userId = event.target.value;
-	
+        {console.log('userId-1 : ' , userId)}
 		this.setState(function(previousState) {
 		  return {
 			...previousState,
@@ -66,6 +66,7 @@ class Login extends Component {
 						})}
 					</select>
 				</div>
+                
 
 				<button
 					className='btn'
@@ -73,7 +74,7 @@ class Login extends Component {
 					onClick={(event) => this.handleLogin(event)}>
 					Login
 				</button>
-				{/* {redirect && <div>You must log in to view this page</div>} */}
+                {console.log('userId : ' , userId)}
           </div>
 		);  
     }
