@@ -16,9 +16,10 @@ let test =""
     avatar: avatarURL,
     optionOne: optionOne.votes.length,
     optionTwo: optionTwo.votes.length,
-    hasAnswered1: question.optionOne.votes[0],
-    hasAnswered2: question.optionTwo.votes[0],
-    user:authedUser
+    //hasAnswered1: question.optionOne.votes.includes(authedUser),
+    //hasAnswered2: question.optionTwo.votes.includes(authedUser),
+    //user:authedUser
     
   }
 }
+

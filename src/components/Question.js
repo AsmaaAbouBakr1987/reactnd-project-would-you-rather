@@ -6,7 +6,7 @@ import {formatQuestion} from '../utils/helpers'
 
 class Questions extends Component{    
     render(){
-        const {question,optionOneText,authedUser} = this.props
+        const {question,optionOneText} = this.props
 
         const {name, avatar, timestamp, id } = question
 
@@ -23,7 +23,7 @@ class Questions extends Component{
                     {console.log('88', question)}
                     <p>{optionOneText}</p>
                     <p>Or</p>
-                    <p>....</p>
+                    <p>...</p>
                 </div>
             </div>
         )
@@ -33,12 +33,13 @@ class Questions extends Component{
 function mapStateToProps({authedUser, users, questions}, {id}){
     const question = questions[id]
     const optionOneText = question.optionOne.text
-    
+
 
     return{
         authedUser,
         question: formatQuestion(question, users[question.author] ,authedUser),
-        optionOneText: question.optionOne.text
+        optionOneText: question.optionOne.text,
+
     }
 }
 export default connect(mapStateToProps)(Questions)
