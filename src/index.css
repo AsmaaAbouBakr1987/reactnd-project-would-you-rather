@@ -252,3 +252,13 @@ select{
   color: blueviolet;
   border-color: blueviolet;
 }
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+
+.option-selected {
+  color: blueviolet;
+}

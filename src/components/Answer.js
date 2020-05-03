@@ -49,7 +49,7 @@ class Answer extends Component {
                     
                     {!answered ? (
                         <div className="question-body">
-                            <div className="would-you">Would you rather</div>
+                            <div className="would-u-rather"><h2>Would you rather..</h2></div>
                             <div className={selectedAnswer === 'optionOne' ? 'option option-selected' : 'option'} onClick={(e) => { this.chooseAnswer('optionOne')}}>{question.optionOne.text}</div>
                             <div className={selectedAnswer === 'optionTwo' ? 'option option-selected' : 'option'} onClick={(e) => { this.chooseAnswer('optionTwo')}}>{question.optionTwo.text}</div>
                             <button className={ selectedAnswer ? 'btn-default' : 'disabled'} onClick={(e) => {this.handleSaveAnswer(e)}}>Submit</button>
