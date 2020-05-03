@@ -5,8 +5,6 @@ import Question from './Question'
 import Nav from './Nav'
 import { Link } from 'react-router-dom'
 
-import { formatQuestion} from '../utils/helpers'
-
 
 class Dashboard extends Component{
     state = {
@@ -18,8 +16,7 @@ class Dashboard extends Component{
     })
     }
     render(){
-        const {questions, user, authedUser} = this.props
-        const name = user ? user.name : ''
+        const {questions, authedUser} = this.props
         console.log(this.props)
 
         const { showAnswered } = this.state;

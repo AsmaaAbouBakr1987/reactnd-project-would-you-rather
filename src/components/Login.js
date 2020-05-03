@@ -12,7 +12,6 @@ class Login extends Component {
 	
 	handleSelectionChanged = function(event) {
 		const userId = event.target.value;
-        {console.log('userId-1 : ' , userId)}
 		this.setState(function(previousState) {
 		  return {
 			...previousState,

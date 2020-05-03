@@ -8,7 +8,7 @@ class Questions extends Component{
     render(){
         const {question,optionOneText} = this.props
 
-        const {name, avatar, timestamp, id } = question
+        const {name, avatar } = question
 
         return(
             <div className= 'question'>
@@ -32,7 +32,6 @@ class Questions extends Component{
 
 function mapStateToProps({authedUser, users, questions}, {id}){
     const question = questions[id]
-    const optionOneText = question.optionOne.text
 
 
     return{

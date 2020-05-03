@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component} from 'react'
 import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
     
@@ -8,7 +8,8 @@ class Nav extends Component {
         const avatar = user ? user.avatarURL : 'placeholder.png'
         const name = user ? user.name : ''
         return (
-    
+        
+        <div>
         <nav className='nav'>
             <ul>
                 <li>
@@ -17,18 +18,20 @@ class Nav extends Component {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/add' exact activeClassName='active'>
+                    <NavLink to='/NewQuestion' exact activeClassName='active'>
                         New Question
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/leaderboard' exact activeClassName='active'>
+                    <NavLink to='/Leaderboard' exact activeClassName='active'>
                         Leader Board
                     </NavLink>
                 </li>
+            </ul>
+        </nav>
                 {
                     authedUser
-                    && <li className="user-info">
+                    && <div className='right-nav'>
                             <NavLink to='/' exact activeClassName='active'>
                                 <div className="nav-user">
                                     <span>Hello {name}</span>
@@ -40,10 +43,9 @@ class Nav extends Component {
                                     <span>Logout</span>
                                 </div>
                             </NavLink>
-                        </li>
+                        </div>
                 }
-            </ul>
-        </nav>
+        </div>   
     )
     }
 }

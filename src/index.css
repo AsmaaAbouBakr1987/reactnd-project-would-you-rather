@@ -74,7 +74,7 @@ li {
   margin: 10px;
 }
 
-.question {
+.question, .users-list li {
   width: 100%;
   max-width: 590px;
   padding: 10px;
@@ -89,6 +89,166 @@ li {
   display: flex;
   font-weight: bold;
 }
+.nav-user {
+  float: right;
+  display: flex;
+  align-items: center;
+}
+
+.nav-avatar {
+  height: 20px;
+  width: 20px;
+  border-radius: 15px;
+  margin: 0 5px 0 10px;
+}
 .would-u-rather h2 {
   color: blueviolet;
+}
+.right-nav {
+  width: 30%;
+  text-align: right;
+  display: inline;
+}
+nav.nav {
+  display: inline-block;
+  width: 70%;
+  text-align: left !important;
+}
+/* Answer
+===========*/
+.tile-body {
+  padding: 12px;
+}
+
+.tile-header{
+  height: 40px;
+  line-height: 40px;
+  background: blueviolet;
+  color: #fff;
+}
+
+.tile-left {
+  width: 33%;
+  display: inline-block;
+  border-right: 1px solid #ccc;
+}
+
+.question-body {
+  width: 62%;
+  float: right;
+  text-align: left;
+  margin-left: 10px;
+}
+.question-detail {
+  height: 250px;
+}
+
+.question-detail .tile-left {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+/* Leaderboard
+================*/
+.users-list .tile-item{
+  padding: 10px;
+  width: 100%;
+}
+
+.tile-section {
+  display: inline-block;
+}
+
+.tile-section.section-1 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-right: 1px solid #ccc;
+}
+
+.tile-section.section-1,
+.tile-section.section-3 {
+  width: 25%;
+}
+
+.tile-section.section-3 {
+    width: 24%;
+    border: 1px solid #ccc;
+    height: 85px;
+    margin-top: 38px;
+    vertical-align: top;
+}
+
+.tile-section.section-2 {
+  vertical-align: top;
+  width: 47%;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.tile-section.section-2 .user-name {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.tile-section.section-2 .label {
+  padding: 10px 0px;
+  display: inline-block;
+  width: 180px;
+}
+
+.total-score-header {
+  background: blueviolet;
+  padding: 10px;
+  color: #fff;
+}
+
+.total-score-count {
+  padding: 15px;
+}
+
+/* NewQuestion Page
+=======================*/
+form {
+  padding: 15px;
+  text-align: left;
+}
+
+input {
+  display: block;
+  width: 95%;
+  padding: 12px;
+  margin: 12px 0;
+}
+
+.new-question {
+  height: 272px;
+}
+
+.new-question button {
+  color: blueviolet;
+  border: 1px solid blueviolet;
+}
+
+select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 10px;
+  width: 250px;
+  margin: 10px;
+}
+
+.user-select div {
+  padding: 18px;
+}
+
+.tile-item.login {
+  height: 250px;
+}
+
+.tile-item.login button {
+  margin-top: 30px;
+  color: blueviolet;
+  border-color: blueviolet;
 }
