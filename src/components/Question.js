@@ -11,6 +11,7 @@ class Questions extends Component{
         const {name, avatar } = question
 
         return(
+           
             <div className= 'question'>
                 <img
                 src={avatar}
@@ -25,7 +26,9 @@ class Questions extends Component{
                     <p>Or</p>
                     <p>...</p>
                 </div>
+                
             </div>
+            
         )
     }
 }

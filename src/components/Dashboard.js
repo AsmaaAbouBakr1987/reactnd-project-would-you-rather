@@ -4,7 +4,7 @@ import '../index.css'
 import Question from './Question'
 import Nav from './Nav'
 import { Link } from 'react-router-dom'
-
+import { Button } from 'semantic-ui-react'
 
 class Dashboard extends Component{
     state = {
@@ -16,6 +16,7 @@ class Dashboard extends Component{
     })
     }
     render(){
+        
         const {questions, authedUser} = this.props
         console.log(this.props)
 
@@ -33,7 +34,13 @@ class Dashboard extends Component{
             
             <div className='center'>
                 <Nav/>
-                <ul className='dashboard-list'>
+                
+                <div className="btn-group">
+                    <button className={ !showAnswered ? 'btn-selected' : 'btn-default'} onClick={(e) => this.filterQuestions(false)}>Unanswered Questions</button>
+                    <button className={ showAnswered ? 'btn-selected' : 'btn-default'} onClick={(e) => this.filterQuestions(true)}>Answered Questions</button>
+                </div>
+
+                <ul className="questions-list">
                     {sortedQuestions.map((question) => (
                         <li key={question.id}>
                             <Link to={`question/${question['id']}`}>
